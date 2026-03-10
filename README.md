@@ -59,7 +59,7 @@ claude mcp add --scope user memory \
 In any Claude Code session:
 
 ```
-Покажи memory_status
+Show memory_status
 ```
 
 ## Namespace Resolution
@@ -109,20 +109,23 @@ To save to the shared global namespace, use `to_global: true` on `memory_ingest`
 ## Usage Examples
 
 **Save a project decision:**
-```
-Запомни: мы используем Tailwind + shadcn/ui для стилей
+
+```text
+Remember: we use Tailwind + shadcn/ui for styling
 → memory_ingest → saved to project namespace
 ```
 
 **Save a global fact:**
-```
-Сохрани в глобальную память: мой часовой пояс UTC+4
+
+```text
+Save to global memory: my timezone is UTC+4
 → memory_ingest with to_global: true → saved to global namespace
 ```
 
 **Query across all memories:**
-```
-Какие архитектурные решения мы принимали?
+
+```text
+What architecture decisions have we made?
 → memory_query → Haiku synthesizes answer from project + global
 ```
 
